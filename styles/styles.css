@@ -96,13 +96,13 @@ NAVBAR
 HOME
 ********/
 
-#home {
+.home {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
-    height: 75rem;
+    height: calc(100vh - 5rem);
     color: #000000;
     background: #dce0e6;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
@@ -111,7 +111,7 @@ HOME
 
 .home-text {
     text-align: center;
-    font-size: 7rem;
+    font-size: 3rem;
     padding: 0 20rem;
 }
 
@@ -120,19 +120,19 @@ HOME
 PROJECTS
 ********/
 
-#projects {
+.projects {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 75rem;
+    height: calc(100vh - 5rem);
     color: #ffffff;
     background-color: #000000;
 }
 
 .project-text {
     text-align: center;
-    font-size: 7rem;
+    font-size: 3rem;
     padding: 0 20rem;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
     background: linear-gradient(to right, #a8edea, #fed6e3);
@@ -146,12 +146,12 @@ PROJECTS
 CONTACT
 ********/
 
-#contact {
+.contact {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 75rem;
+    height: calc(100vh - 5rem);
     color: #000000;
     background: #dce0e6;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
@@ -160,7 +160,7 @@ CONTACT
 
 .contact-text {
     text-align: center;
-    font-size: 7rem;
+    font-size: 3rem;
     padding: 0 20rem;
 }
 

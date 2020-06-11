@@ -1,6 +1,22 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navLinks = document.getElementsByClassName('nav-links')[0]
+$(document).ready(function() {
+    $(".toggle-button").click(function() {
+        $(".nav-links").toggle();
+    })
 
-toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('active')
-})
+    $(".nav-links").click(function() {
+        var w = $(window).width();
+        if (w < 768) {
+            $(".nav-links").hide();
+        }
+    })
+
+    $(window).resize(function(){  
+        var w = $(window).width();  
+        if (w > 768) {  
+            $(".nav-links").show();
+        }
+        if (w < 768) {  
+            $(".nav-links").hide();
+        }  
+    });
+});
