@@ -1,6 +1,6 @@
-/*******
-GERNERAL
-********/
+/******************************/
+/*******    GENERAL    ********/
+/******************************/
 
 html {
     font-size: 62.5%; 
@@ -12,16 +12,17 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "SF Pro Text", "Helvetica", "Arial",sans-serif;
+    font-family: "SF Pro Text", "Helvetica", "Arial", sans-serif;
     background: #dce0e6;
     background: -webkit-linear-gradient(to top, #a8edea, #fed6e3);
     background: linear-gradient(to top, #a8edea, #fed6e3);
 }
 
 
-/*******
-NAVBAR
-********/
+
+/*******************************/
+/********    NAVBAR    *********/
+/*******************************/
 
 .nav {
     display: flex;
@@ -73,6 +74,10 @@ NAVBAR
     color: #000000;
 }
 
+/********************************/
+/**    NAVBAR TOGGLE BUTTON    **/
+/********************************/
+
 .toggle-button {
     position: absolute;
     top: 2.25rem;
@@ -92,9 +97,10 @@ NAVBAR
 }
 
 
-/*******
-MAIN
-********/
+
+/******************************/
+/***    MAIN BODY STYLES    ***/
+/******************************/
 
 .main {
     margin-top: 6.5rem;
@@ -105,9 +111,10 @@ h1 {
 }
 
 
-/*******
-HOME
-********/
+
+/***************************/
+/*******    HOME    ********/
+/***************************/
 
 .home {
     display: flex;
@@ -124,9 +131,10 @@ HOME
 }
 
 
-/*******
-PROJECTS
-********/
+
+/*******************************/
+/*******    PROJECTS    ********/
+/*******************************/
 
 .projects {
     display: flex;
@@ -146,9 +154,10 @@ PROJECTS
 }
 
 
-/*******
-CONTACT
-********/
+
+/******************************/
+/*******    CONTACT    ********/
+/******************************/
 
 .contact {
     display: flex;
@@ -162,14 +171,18 @@ CONTACT
 
 .contact-text {
     align-self: center;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
+
+/*******************************/
+/*****    CONTACT FORM    ******/
+/*******************************/
 
 .form-container {
     border-radius: 5px;
     background: #f2f2f2;
     padding: 2rem;
-    margin: 0 20% 20rem 20%;
+    margin: 0 20% 15rem 20%;
 }
 
 input[type=text], textarea {
@@ -178,7 +191,12 @@ input[type=text], textarea {
     border: 1px solid #cccccc;
     border-radius: 5px;
     resize: vertical;
-  }
+}
+
+textarea {
+    height: 20rem;
+    font-family: "SF Pro Text", "Helvetica", "Arial", sans-serif;
+}
   
 label {
     padding: 1.2rem 1.2rem 1.2rem 0;
@@ -191,7 +209,7 @@ input[type=submit] {
     padding: 1.2rem;
     width: 20%;
     border: none;
-    border-radius: 50px;
+    border-radius: 5px;
     float: right;
 }
 
@@ -219,9 +237,10 @@ input[type=submit]:hover {
 }
 
 
-/*******
-RESPONSIVE MOBILE
-********/
+
+/*******************************/
+/***    MOBILE-RESPONSIVE    ***/
+/*******************************/
 
 @media (max-width: 768px) {
     h1 {

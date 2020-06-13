@@ -5,8 +5,8 @@
         <title>Neil Hemnani</title>
         <link rel="stylesheet" href="styles/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
         <script src="scripts/script.js" defer></script>
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
         <meta name="viewport" content="width=device-width">
         <meta charset="UTF-8">
         <meta name="author" content="Neil Hemnani">
@@ -47,14 +47,14 @@
                 <h1 class="contact-text">Contact Me</h1>
                 
                 <div class="form-container">
-                    <form action="https://formspree.io/maypjdzy" method="POST">
+                    <form action="https://formspree.io/maypjdzy" method="POST" name="contact-form">
                         
                         <div class="form-row">
                             <div class="col-20">
                                 <label for="name">Name:</label>
                             </div>
                             <div class="col-80">
-                                <input type="text" id="name" name="fullname" placeholder="Your full name..">
+                                <input type="text" id="name" name="name" placeholder="Your full name..">
                             </div>
                         </div>
                         

@@ -24,4 +24,25 @@ $(document).ready(function() {
             $(".nav-links").hide();
         }  
     });
+
+    $("form[name='contact-form']").validate({
+        rules: {
+            name: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            message: "required"
+        },
+        messages: {
+            name: "Please enter your name",
+            email: "Please enter a valid email address",
+            message: "Please type a message"
+        },
+        submitHandler: function(form) {
+            form.submit();
+        }
+    });
 });
