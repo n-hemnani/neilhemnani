@@ -75,8 +75,8 @@ NAVBAR
 
 .toggle-button {
     position: absolute;
-    top: 2.5rem;
-    right: 5rem;
+    top: 2.25rem;
+    right: 3rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -93,16 +93,26 @@ NAVBAR
 
 
 /*******
+MAIN
+********/
+
+.main {
+    margin-top: 6.5rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+
+/*******
 HOME
 ********/
 
 .home {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
-    height: calc(100vh - 5rem);
+    height: 73.5rem;
     color: #000000;
     background: #dce0e6;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
@@ -111,8 +121,6 @@ HOME
 
 .home-text {
     text-align: center;
-    font-size: 3rem;
-    padding: 0 20rem;
 }
 
 
@@ -123,17 +131,13 @@ PROJECTS
 .projects {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 5rem);
+    height: 73.5rem;
     color: #ffffff;
     background-color: #000000;
 }
 
 .project-text {
     text-align: center;
-    font-size: 3rem;
-    padding: 0 20rem;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
     background: linear-gradient(to right, #a8edea, #fed6e3);
     -webkit-background-clip: text;
@@ -148,10 +152,8 @@ CONTACT
 
 .contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 5rem);
     color: #000000;
     background: #dce0e6;
     background: -webkit-linear-gradient(to right, #a8edea, #fed6e3);
@@ -159,9 +161,61 @@ CONTACT
 }
 
 .contact-text {
-    text-align: center;
-    font-size: 3rem;
-    padding: 0 20rem;
+    align-self: center;
+    margin-top: 20rem;
+}
+
+.form-container {
+    border-radius: 5px;
+    background: #f2f2f2;
+    padding: 2rem;
+    margin: 0 20% 20rem 20%;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+label {
+    padding: 1.2rem 1.2rem 1.2rem 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.2rem;
+    width: 20%;
+    border: none;
+    border-radius: 50px;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.col-20 {
+    float: left;
+    width: 20%;
+    margin-top: .6rem;
+    font-size: 1.5rem;
+}
+
+.col-80 {
+    float: right;
+    width: 80%;
+    margin-top: .6rem;
+}
+
+.form-row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 
@@ -170,6 +224,10 @@ RESPONSIVE MOBILE
 ********/
 
 @media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
     .toggle-button {
         display: flex;
     }
@@ -200,5 +258,24 @@ RESPONSIVE MOBILE
 
     .nav-links.active {
         display: flex;
+    }
+
+    .contact-text {
+        align-self: center;
+        margin-top: 15rem;
+    }
+
+    .form-container {
+        margin: 0 5rem 20rem 5rem;
+    }
+
+    .col-20, .col-80 {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        margin-top: 1.2rem;   
     }
 }
