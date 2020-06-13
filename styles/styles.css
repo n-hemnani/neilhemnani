@@ -211,6 +211,7 @@ input[type=submit] {
     border: none;
     border-radius: 5px;
     float: right;
+    -webkit-appearance: none;
 }
 
 input[type=submit]:hover {
