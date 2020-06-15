@@ -25,7 +25,7 @@ $(document).ready(function() {
         }  
     });
 
-    $("form[name='contact-form']").validate({
+    $("#contact-form").validate({
         rules: {
             name: {
                 required: true
