@@ -12,10 +12,17 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "SF Pro Text", "Helvetica", "Arial", sans-serif;
-    background: #dce0e6;
-    background: -webkit-linear-gradient(to top, #a8edea, #fed6e3);
-    background: linear-gradient(to top, #a8edea, #fed6e3);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#particles-js {
+    background-color: #ffffff;
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:-1; 
 }
 
 
@@ -33,45 +40,57 @@ body {
     z-index: 1;
     justify-content: space-between;
     align-items: center;
-    background-color: #000000;
     color: white;
     flex-shrink: 2;
 }
 
-.nav-header {
-    font-size: 4rem;
-    margin: 1.25rem 1.75rem 1.25rem 4rem;
-    text-transform: lowercase;
-}
-
 .nav-header a {
-    color: #ffffff;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
+    text-transform: lowercase;
+    color: #000000;
     text-decoration: none;
 }
 
-.nav-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
+.nav-links {
+    margin-top: 1rem;
     margin-right: 3rem;
 }
 
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links li a {
-    display: block;
+.nav-link {
+    display: inline-block;
+    position: relative;
     text-decoration: none;
     text-transform: lowercase;
     font-size: 2.2rem;
-    padding: 2.35rem 2rem;
-    color: #ffffff;
+    padding: 2rem 0;
+    margin: 0 2rem;
+    color: #000000;
 }
 
-.nav-links li a:hover {
-    background: #ffffff;
-    color: #000000;
+.nav-link::before {
+    transition: 300ms;
+    height: .5rem;
+    content: "";
+    position: absolute;
+    background-color: #ff0000;
+    width: 0%;
+    bottom: 1rem;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link.active-page::before {
+    transition: 300ms;
+    height: .5rem;
+    content: "";
+    position: absolute;
+    background-color: #ff0000;
+    width: 100%;
+    bottom: 1rem;
 }
 
 /********************************/
@@ -80,7 +99,7 @@ body {
 
 .toggle-button {
     position: absolute;
-    top: 2.25rem;
+    top: 1.75rem;
     right: 3rem;
     display: none;
     flex-direction: column;
@@ -93,7 +112,7 @@ body {
     height: .3rem;
     width: 100%;
     border-radius: 1rem;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 
@@ -101,10 +120,6 @@ body {
 /******************************/
 /***    MAIN BODY STYLES    ***/
 /******************************/
-
-.main {
-    margin-top: 6.5rem;
-}
 
 h1 {
     font-size: 6rem;
@@ -120,16 +135,14 @@ h1 {
     display: flex;
     flex-direction: row;
     color: #000000;
-    background: #ffffff;
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    position: relative;
+    height: 79.8rem;
 }
 
 .home-text {
     text-align: center;
     font-size: 3vw;
-    margin: 31rem 15%;
+    margin: 42vh 15%;
 }
 
 
@@ -141,19 +154,16 @@ h1 {
 .projects {
     display: flex;
     flex-direction: row;
-    height: 73.5rem;
-    color: #ffffff;
-    background-color: #000000;
+    justify-content: center;
+    color: #000000;
+    position: relative;
+    height: 79.8rem;
 }
 
 .project-text {
-    text-align: center;
-    background: #ffffff;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-align: center;;
+    font-size: 3vw;
+    margin: 15vh 15% 0 15%;
 }
 
 
@@ -167,14 +177,12 @@ h1 {
     flex-direction: column;
     justify-content: center;
     color: #000000;
-    background: #C9D6FF;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+    height: 79.8rem;
 }
 
 .contact-text {
     align-self: center;
-    margin-top: 10rem;
+    margin-top: 25vh;
 }
 
 /*******************************/
@@ -182,10 +190,15 @@ h1 {
 /*******************************/
 
 .form-container {
+    /*
     border-radius: 5px;
     background: #f2f2f2;
+    box-shadow: 1px 1px 5px grey;
+    */
     padding: 2rem;
-    margin: 0 20% 15rem 20%;
+    width: 75vw;
+    margin-bottom: 20vh;
+    align-self: center;
 }
 
 form .error {
@@ -195,7 +208,7 @@ form .error {
 input[type=text], textarea {
     width: 100%;
     padding: 1.2rem;
-    border: 1px solid #cccccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     resize: vertical;
 }
@@ -211,7 +224,7 @@ label {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #ff0000;
     color: white;
     padding: 1.2rem;
     width: 20%;
@@ -222,14 +235,14 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #fd5252;
 }
 
 .col-20 {
     float: left;
     width: 20%;
     margin-top: .6rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 .col-80 {
@@ -245,23 +258,35 @@ input[type=submit]:hover {
 }
 
 
-
 /*******************************/
 /***    MOBILE-RESPONSIVE    ***/
 /*******************************/
 
 @media (max-width: 768px) {
     h1 {
+        font-size: 6rem;
+    }
+
+    .home-text {
         font-size: 3rem;
     }
 
     .toggle-button {
         display: flex;
     }
+    
+    .toggle-button .bar {
+        background-color: #ffffff;
+    }
 
     .nav {
         flex-direction: column;
         align-items: flex-start;
+        background: #000000;
+    }
+
+    .nav .nav-header a {
+        color: #ffffff;
     }
 
     .nav .nav-links {
@@ -281,24 +306,20 @@ input[type=submit]:hover {
 
     .nav-links li a {
         padding: 1.25rem;
+        color: #ffffff;
+    }
+
+    .nav-links li a:hover {
+        background: #ffffff;
+        color: #000000;
     }
 
     .nav-links.active {
         display: flex;
     }
 
-    .home-text {
-        font-size: 3rem;
-        margin: 22.5rem 15%;
-    }
-
-    .contact-text {
-        align-self: center;
-        margin-top: 12.5rem;
-    }
-
     .form-container {
-        margin: 0 5rem 17.5rem 5rem;
+        margin: 0 5rem 12.5rem 5rem;
     }
 
     .col-20, .col-80 {
