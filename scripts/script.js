@@ -1,8 +1,14 @@
 $(document).ready(function() {
+    // button to display navigation menu when on mobile
     $(".toggle-button").click(function() {
-        $(".nav-links").toggle();
+        if ($(".nav-links").css("display") === "none") {
+            $(".nav-links").css("display", "flex");
+        } else {
+            $(".nav-links").css("display", "none");
+        }
     });
 
+    // hide navigation menu when page is selected on mobile
     $(".nav-links").click(function() {
         var w = $(window).width();
         if (w < 768) {
@@ -10,11 +16,14 @@ $(document).ready(function() {
         }
     });
 
+    /*
     $('a[href*="#"]').on('click', function(e) {
         e.preventDefault()
         $('html, body').animate( { scrollTop: $($(this).attr('href')).offset().top - 65 }, 300)
     })
+    */
 
+    // hide or show navigation menu responsively
     $(window).resize(function(){  
         var w = $(window).width();  
         if (w > 768) {  
@@ -25,6 +34,7 @@ $(document).ready(function() {
         }  
     });
 
+    // validation for contact form
     $("#contact-form").validate({
         rules: {
             name: {
@@ -32,7 +42,7 @@ $(document).ready(function() {
             },
             email: {
                 required: true,
-                email: true
+                email: true       // make sure email is in proper format
             },
             message: "required"
         },
@@ -42,25 +52,14 @@ $(document).ready(function() {
             message: "Please type a message"
         },
         submitHandler: function(form) {
-            form.submit();
+            form.submit();    // submit form if valid
         }
     });
 });
 
 
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
 
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
-
+// code for particles in background using particles.js library
 particlesJS('particles-js',
   
 {
@@ -69,7 +68,7 @@ particlesJS('particles-js',
         "value": 80,
         "density": {
           "enable": true,
-          "value_area": 1200
+          "value_area": 1500
         }
       },
       "color": {
@@ -113,9 +112,9 @@ particlesJS('particles-js',
       "line_linked": {
         "enable": false,
         "distance": 150,
-        "color": "#000000",
-        "opacity": 0.2762060339181007,
-        "width": 0.9469921162906312
+        "color": "#000",
+        "opacity": 0.362060339181007,
+        "width": .9469921162906312
       },
       "move": {
         "enable": true,
@@ -124,7 +123,7 @@ particlesJS('particles-js',
         "random": true,
         "straight": false,
         "out_mode": "bounce",
-        "bounce": false,
+        "bounce": true,
         "attract": {
           "enable": false,
           "rotateX": 600,
@@ -143,7 +142,7 @@ particlesJS('particles-js',
           "enable": true,
           "mode": "repulse"
         },
-        "resize": false
+        "resize": true
       },
       "modes": {
         "grab": {
