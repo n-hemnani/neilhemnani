@@ -147,7 +147,6 @@ h1 {
     margin-top: 8rem;
     height: 90vh;
     width: 100%;
-    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -361,7 +360,6 @@ input[type=submit]:hover {
     .home-text {
         font-size: 3vh;
         display: flex;
-        margin: 0 15% 15rem 15%; 
     }
 
     .project {
