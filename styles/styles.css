@@ -150,7 +150,7 @@ h1 {
     position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     color: #000000;
     overflow: scroll;
 }
@@ -158,7 +158,7 @@ h1 {
 .home-text {
     text-align: center;
     font-size: 3vw;
-    margin: 27.5vh 15% 0 15%;
+    margin: 0 15%;
 }
 
 
@@ -194,6 +194,10 @@ h1 {
 /******************************/
 /*******    CONTACT    ********/
 /******************************/
+
+.contact-container {
+    overflow: hidden;
+}
 
 .contact {
     margin-top: 8rem;
@@ -309,6 +313,7 @@ input[type=submit]:hover {
     .nav-links {
         display: none;
         flex-direction: column;
+        margin-top: 1.25rem;
         width: 100%;
         text-align: center;
         background-color: #000000;
@@ -348,15 +353,17 @@ input[type=submit]:hover {
 
     .home {
         margin-top: 7rem;
+        height: 92vh;
     }
 
     .home-text {
         font-size: 4vh;
-        margin: 22.5vh 15% 0 15%;
+        display: flex;
     }
 
     .project {
         margin-top: 7rem;
+        height: 92vh;
     }
 
     .project-text {
@@ -365,6 +372,7 @@ input[type=submit]:hover {
 
     .contact {
         margin-top: 7rem;
+        height: 92vh;
     }
 
     .contact-text {
