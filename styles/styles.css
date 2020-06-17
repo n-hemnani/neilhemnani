@@ -35,28 +35,34 @@ body {
 
 .nav {
     display: flex;
+    flex-direction: row;
     position: fixed;
+    height: 8rem;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     justify-content: space-between;
     align-items: center;
     color: white;
 }
 
+.nav-header {
+    display: inline;
+    margin-left: 4rem;
+}
+
 .nav-header a {
     font-size: 3rem;
-    margin-top: 1rem;
-    margin-left: 5rem;
+    display: inline;
     text-transform: lowercase;
     color: #000000;
     text-decoration: none;
 }
 
 .nav-links {
-    margin-top: 1rem;
-    margin-right: 3rem;
+    display: inline;
+    margin-right: 2rem;
 }
 
 .nav-link {
@@ -101,13 +107,13 @@ body {
 
 .toggle-button {
     position: absolute;
-    top: 2.1rem;
+    top: 2.25rem;
     right: 3.5rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 3rem;
-    height: 2.1rem;
+    height: 2.5rem;
 }
 
 .toggle-button .bar {
@@ -138,17 +144,21 @@ h1 {
 /***************************/
 
 .home {
+    margin-top: 8rem;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: #000000;
-    position: relative;
-    height: 79.8rem;
+    overflow: scroll;
 }
 
 .home-text {
     text-align: center;
     font-size: 3vw;
-    margin: 40vh 15%;
+    margin: 27.5vh 15% 0 15%;
 }
 
 
@@ -160,18 +170,21 @@ h1 {
 /*******************************/
 
 .projects {
+    margin-top: 8rem;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: #000000;
-    position: relative;
-    height: 79.8rem;
+    overflow: scroll;
 }
 
 .project-text {
-    text-align: center;;
+    text-align: center;
     font-size: 3vw;
-    margin: 15vh 15% 0 15%;
+    margin: 4vh 15% 0 15%;
 }
 
 
@@ -183,16 +196,20 @@ h1 {
 /******************************/
 
 .contact {
+    margin-top: 8rem;
+    height: 90vh;
+    width: 100%;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: #000000;
-    height: 79.8rem;
+    overflow: scroll;
 }
 
 .contact-text {
-    align-self: center;
-    margin-top: 25vh;
+    margin-top: 10vh;
 }
 
 
@@ -203,7 +220,7 @@ h1 {
 .form-container {
     padding: 2rem;
     width: 75vw;
-    margin-bottom: 20vh;
+    margin-bottom: 9vh;
     align-self: center;
 }
 
@@ -272,39 +289,21 @@ input[type=submit]:hover {
 /*******************************/
 
 @media (max-width: 768px) {
-    .home-text {
-        font-size: 3rem;
-    }
-
-    .project-text {
-        font-size: 3rem;
-    }
-
-    .contact-text {
-        font-size: 3rem;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-    
-    .toggle-button .bar {
-        background-color: #ffffff;
-    }
-
     .nav {
+        height: 7rem;
         flex-direction: column;
         align-items: flex-start;
         background: #000000;
     }
 
     .nav-header {
-        margin: 1rem 0rem;
+        margin-top: 1.5rem;
+        margin-left: 3.5rem;
+        align-self: start;
     }
 
     .nav-header a {
         color: #ffffff;
-        margin-left: 3rem;
     }
 
     .nav-links {
@@ -312,6 +311,7 @@ input[type=submit]:hover {
         flex-direction: column;
         width: 100%;
         text-align: center;
+        background-color: #000000;
     }
 
     .nav-links a {
@@ -336,8 +336,38 @@ input[type=submit]:hover {
         width: 0%;
     }
 
-    .form-container {
-        margin: 0 5rem 12.5rem 5rem;
+    .toggle-button {
+        display: flex;
+    }
+    
+    .toggle-button .bar {
+        background-color: #ffffff;
+    }
+
+    .home {
+        margin-top: 7rem;
+    }
+
+    .home-text {
+        font-size: 4vh;
+        margin: 25vh 15% 0 15%;
+    }
+
+    .project {
+        margin-top: 7rem;
+    }
+
+    .project-text {
+        font-size: 3rem;
+    }
+
+    .contact {
+        margin-top: 7rem;
+    }
+
+    .contact-text {
+        margin: 15vh 15% 0 15%;
+        font-size: 3rem;
     }
 
     .col-20, .col-80 {
