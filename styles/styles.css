@@ -195,25 +195,30 @@ h1 {
 /*******    CONTACT    ********/
 /******************************/
 
-.contact-container {
-    overflow: hidden;
-}
-
 .contact {
     margin-top: 8rem;
     height: 90vh;
     width: 100%;
     position: relative;
+    color: #000000;
+    overflow: auto;
+}
+
+.contact .contact-window {
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: #000000;
-    overflow: scroll;
+    justify-content: center;
+}
+
+.contact .contact-window .contact-content {
+    margin: auto;
 }
 
 .contact-text {
     margin-top: 10vh;
+    text-align: center;
 }
 
 
@@ -225,7 +230,6 @@ h1 {
     padding: 2rem;
     width: 75vw;
     margin-bottom: 9vh;
-    align-self: center;
 }
 
 form .error {
@@ -359,6 +363,7 @@ input[type=submit]:hover {
     .home-text {
         font-size: 4vh;
         display: flex;
+        margin: 0 15% 15rem 15%; 
     }
 
     .project {
