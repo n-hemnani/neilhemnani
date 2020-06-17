@@ -311,11 +311,15 @@ input[type=submit]:hover {
         flex-direction: column;
         width: 100%;
         text-align: center;
+        /*
         background-color: #000000;
+        color: #ffffff;
+        */
     }
 
     .nav-links a {
         padding: 1.25rem;
+        background-color: #000000;
         color: #ffffff;
     }
 
