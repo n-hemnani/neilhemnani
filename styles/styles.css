@@ -157,7 +157,7 @@ h1 {
 .home-text {
     text-align: center;
     font-size: 3vw;
-    margin: 0 15%;
+    margin: 0 15% 7.5rem 15%;
 }
 
 
@@ -354,7 +354,6 @@ input[type=submit]:hover {
 
     .home {
         margin-top: 7rem;
-        height: 90rem;
     }
 
     .home-text {
