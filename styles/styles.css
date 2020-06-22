@@ -12,6 +12,7 @@ html {
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -152,6 +153,7 @@ h1 {
     justify-content: center;
     color: #000000;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .home-text {
@@ -178,6 +180,7 @@ h1 {
     align-items: center;
     color: #000000;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .project-text {
@@ -201,6 +204,7 @@ h1 {
     position: relative;
     color: #000000;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .contact .contact-window {
