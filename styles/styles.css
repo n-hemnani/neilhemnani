@@ -200,7 +200,7 @@ h1 {
     width: 100%;
     position: relative;
     color: #000000;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .contact .contact-window {
