@@ -372,7 +372,7 @@ input[type=submit]:hover {
 
     .contact {
         margin-top: 7rem;
-        height: 92vh;
+        margin-bottom: 12.5rem;
     }
 
     .form-container {
@@ -380,7 +380,7 @@ input[type=submit]:hover {
     }
 
     .contact-text {
-        margin: 7.5vh 15% 2.5vh 15%;
+        margin: 7.5vh 10% 2.5vh 10%;
         font-size: 3rem;
     }
 
