@@ -221,7 +221,7 @@ h1 {
 .form-container {
     padding: 0 2rem;
     width: 75vw;
-    margin-top: 5vh;
+    margin-top: 2.5vh;
     margin-bottom: 9vh;
 }
 
@@ -290,6 +290,10 @@ input[type=submit]:hover {
 /*******************************/
 
 @media (max-width: 768px) {
+    body {
+        overscroll-behavior: none;
+    }
+    
     .nav {
         height: 7rem;
         flex-direction: column;
@@ -368,7 +372,7 @@ input[type=submit]:hover {
 
     .contact {
         margin-top: 7rem;
-        height: 105vh;
+        height: 92vh;
     }
 
     .form-container {
