@@ -16,12 +16,18 @@ $(document).ready(function() {
         }
     });
 
-    /*
-    $('a[href*="#"]').on('click', function(e) {
-        e.preventDefault()
-        $('html, body').animate( { scrollTop: $($(this).attr('href')).offset().top - 65 }, 300)
-    })
-    */
+    // hide scrollable content under the transparent navbar when in desktop mode
+    $(window).scroll(function (event) {
+      var w = $(window).width();
+      if (w > 768) {
+        var scroll = $(window).scrollTop();
+        if (scroll > 60) {
+          $(".nav").css("background-color", "rgba(255,255,255,0.95)");
+        } else {
+          $(".nav").css("background-color", "transparent");
+        }
+      }
+    });
 
     // hide or show navigation menu responsively
     $(window).resize(function(){  

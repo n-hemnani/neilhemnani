@@ -45,7 +45,7 @@ body {
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    background:inherit;
 }
 
 .nav-header {
@@ -179,7 +179,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     color: #000000;
-    overflow: scroll;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -199,23 +199,14 @@ h1 {
 
 .contact {
     margin-top: 8rem;
-    height: 90vh;
     width: 100%;
     position: relative;
-    color: #000000;
-    overflow: scroll;
-    -webkit-overflow-scrolling: touch;
-}
-
-.contact .contact-window {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-.contact .contact-window .contact-content {
-    margin: auto;
+    color: #000000;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .contact-text {
@@ -228,8 +219,9 @@ h1 {
 /*******************************/
 
 .form-container {
-    padding: 2rem;
+    padding: 0 2rem;
     width: 75vw;
+    margin-top: 5vh;
     margin-bottom: 9vh;
 }
 
@@ -379,8 +371,12 @@ input[type=submit]:hover {
         height: 92vh;
     }
 
+    .form-container {
+        width: 80vw;
+    }
+
     .contact-text {
-        margin: 7.5vh 15% 0 15%;
+        margin: 7.5vh 15% 2.5vh 15%;
         font-size: 3rem;
     }
 
