@@ -9,7 +9,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <script src="scripts/script.js" defer></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta name="author" content="Neil Hemnani">
     </head>
@@ -34,7 +34,33 @@
         </nav>
 
         <div class="projects" id="projects">
-            <h1 class="project-text">Here are some of my projects that I've made.</h1>
+            <h1 class="project-text">Projects</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="card_img">
+                        <img src="images/TextEditor.png" alt="" id="texteditor">
+                    </div>
+                    <div class="card_info">
+                        <h1 class="card_title">C++ Text Editor</h1>
+                        <p class="card_text">
+                            A console-based text editor I wrote for a C++ OOP class I took in college. It includes basic features like inserting/deleting text, word-wrapping, undo/redo, and reading/writing to a file. The point of the project was to learn about different design patterns such as command, MVC, and chain of responsbility.
+                        </p>
+                        <a href="https://github.com/n-hemnani/ECTextEditor" target="blank" class="card_cta">View on GitHub</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_img">
+                        <img src="images/Cubed.png" alt="">
+                    </div>
+                    <div class="card_info">
+                        <h1 class="card_title">Cubed</h1>
+                        <p class="card_text">
+                            An iOS app for Rubik's Cube speedsolving. It functions as a timer, scramble generator, and statistics tracker. The purpose for the app was to make something for myself that I could use to get better at cubing.
+                        </p>
+                        <a href="https://github.com/n-hemnani/Cubed" target="blank" class="card_cta">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="particles-js"></div>

@@ -3,17 +3,22 @@
 /******************************/
 
 html {
-    font-size: 62.5%; 
+    font-size: 10px;
     scroll-behavior: smooth;
 }
 
 * { box-sizing: border-box; }
+
+img {
+    width: 100%;
+}
 
 body {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    color: #000000;
 }
 
 #particles-js {
@@ -45,7 +50,8 @@ body {
     z-index: 100;
     justify-content: space-between;
     align-items: center;
-    background:inherit;
+    background: inherit;
+    color: #000000;
 }
 
 .nav-header {
@@ -145,21 +151,19 @@ h1 {
 /***************************/
 
 .home {
-    margin-top: 8rem;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #000000;
-    overflow: scroll;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
 
 .home-text {
     text-align: center;
     font-size: 3vw;
-    margin: 0 15% 7.5rem 15%;
+    margin: 0 15%;
 }
 
 
@@ -172,13 +176,7 @@ h1 {
 
 .projects {
     margin-top: 8rem;
-    height: 90vh;
     width: 100%;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #000000;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
 }
@@ -186,11 +184,87 @@ h1 {
 .project-text {
     text-align: center;
     font-size: 3vw;
-    margin: 4vh 15% 0 15%;
+    margin: 3rem 15% 0 15%;
 }
 
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1.5rem 5rem 1.5rem;
+    margin-bottom: 5rem;
+}
 
+.card {
+    width: 100%;
+    max-width: 98rem;
+    padding: 5rem;
+    margin-top: 5rem;
+    background-color: #e2fffa;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+}
 
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.card_img {
+    transform: translateX(-8rem);
+    position: relative;
+}
+
+.card_img img {
+    display: block;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    object-fit: cover;
+    width: 40rem;
+    height: 25rem;
+}
+
+#texteditor {
+    object-position: 0 0;
+}
+
+.card_title {
+    font-size: 3rem;
+    margin-top: 0rem;
+}
+
+.card_text {
+    font-size: 1.4rem;
+}
+
+.card_cta {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background: linear-gradient(to right, rgba(255, 0, 0), rgb(255, 0, 150));
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.card_cta:hover {
+    background: linear-gradient(to right, rgb(253, 75, 75), rgb(253, 75, 179));
+}
+
+@media screen and (max-width: 1068px) {
+    .card {
+        max-width: 70rem;
+    }
+    
+    .card_img img {
+        width: 32rem;
+        height: 20rem;
+    }
+}
 
 
 /******************************/
@@ -204,7 +278,6 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #000000;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -251,6 +324,7 @@ input[type=submit] {
     background-color: #ff0000;
     color: white;
     padding: 1.2rem;
+    margin-bottom: 2.5rem;
     width: 20%;
     border: none;
     border-radius: 5px;
@@ -353,12 +427,13 @@ input[type=submit]:hover {
     }
 
     .home {
-        margin-top: 7rem;
+        height: 100vh;
     }
 
     .home-text {
         font-size: 3vh;
         display: flex;
+        margin: 7rem 15% 7.5rem 15%;
     }
 
     .project {
@@ -368,6 +443,23 @@ input[type=submit]:hover {
 
     .project-text {
         font-size: 3rem;
+    }
+    
+    .card {
+        max-width: 60rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card_img {
+        transform: translateX(0rem);
+        position: relative;
+        padding-bottom: 2.5rem;
+    }
+    
+    .card_img img {
+        width: 32rem;
+        height: 20rem;
     }
 
     .contact {
