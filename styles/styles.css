@@ -427,13 +427,14 @@ input[type=submit]:hover {
     }
 
     .home {
-        height: 100vh;
+        height: 92vh;
+        margin-top: 7rem;
     }
 
     .home-text {
-        font-size: 3vh;
+        font-size: 4rem;
         display: flex;
-        margin: 7rem 15% 7.5rem 15%;
+        margin: 0 5%;
     }
 
     .project {
